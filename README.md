@@ -24,8 +24,7 @@ Writing expenses in a notebook gets messy quickly. This tool lets you add an exp
 **Step 1.** Clone the repository:
 
 ```bash
-git clone https://github.com/anilkoiri/expense-tracker.git
-cd expense-tracker
+git clone https://github.com/koiri143/expense-tracker.git
 ```
 
 **Step 2.** (Optional) Create a virtual environment:
