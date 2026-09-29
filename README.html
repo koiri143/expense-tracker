@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expense Tracker README</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;max-width:800px;margin:2rem auto;padding:0 1rem;line-height:1.6;color:#222}
+h1,h2{border-bottom:1px solid #ddd;padding-bottom:.3rem}
+pre{background:#f4f4f4;padding:1rem;border-radius:6px;overflow-x:auto}
+code{background:#f4f4f4;padding:2px 4px;border-radius:4px}
+pre code{padding:0}
+table{border-collapse:collapse}
+th,td{border:1px solid #ccc;padding:6px 12px}
+th{background:#eee}
+blockquote{border-left:4px solid #ccc;margin-left:0;padding-left:1rem;color:#555}
+</style>
+</head>
+<body>
+<h1>Expense Tracker</h1>
+<p>A small command line tool for keeping track of your daily spending. I made it to practice Python and to try out the <code>rich</code> library for nicer terminal output.</p>
+<h2>Purpose</h2>
+<p>Writing expenses in a notebook gets messy quickly. This tool lets you add an expense with one command, list everything in a neat table and see how much you have spent in total. All data is stored in a local JSON file, so no account or internet connection is needed.</p>
+<h2>Features</h2>
+<ul>
+<li>Add an expense with amount, category and an optional note</li>
+<li>Show all expenses in a coloured table</li>
+<li>Show the total amount spent</li>
+<li>Data saved locally in <code>expenses.json</code></li>
+</ul>
+<h2>Requirements</h2>
+<ul>
+<li>Python 3.9 or newer</li>
+<li>pip (comes with Python)</li>
+<li>External dependency: <a href="https://github.com/Textualize/rich">rich</a> version 13.0 or newer</li>
+</ul>
+<h2>Installation</h2>
+<p><strong>Step 1.</strong> Clone the repository:</p>
+<pre><code class="language-bash">git clone https://github.com/anilkoiri/expense-tracker.git
+cd expense-tracker
+</code></pre>
+<p><strong>Step 2.</strong> (Optional) Create a virtual environment:</p>
+<pre><code class="language-bash">python -m venv venv
+source venv/bin/activate   # on Windows: venv\Scripts\activate
+</code></pre>
+<p><strong>Step 3.</strong> Install the dependencies:</p>
+<pre><code class="language-bash">pip install -r requirements.txt
+</code></pre>
+<h2>Usage</h2>
+<p>Add an expense:</p>
+<pre><code class="language-bash">python expense_tracker.py add 4.5 food --note &quot;lunch&quot;
+</code></pre>
+<p>Show all expenses:</p>
+<pre><code class="language-bash">python expense_tracker.py list
+</code></pre>
+<p>Show the total:</p>
+<pre><code class="language-bash">python expense_tracker.py total
+</code></pre>
+<p>Example output of <code>list</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Category</th>
+<th>Amount (EUR)</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-09-29</td>
+<td>food</td>
+<td>4.50</td>
+<td>lunch</td>
+</tr>
+<tr>
+<td>2026-09-29</td>
+<td>transport</td>
+<td>30.00</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> run the commands in the same folder each time, because <code>expenses.json</code> is created in the current directory.</p>
+</blockquote>
+<h2>Roadmap</h2>
+<ul>
+<li>[x] Add, list and total commands</li>
+<li>[ ] Delete an expense</li>
+<li>[ ] Monthly summary per category</li>
+</ul>
+<h2>Maintainer</h2>
+<p>Maintained by <strong>Anil Koiri</strong> (<a href="mailto:anilkoiri2054@gmail.com">anilkoiri2054@gmail.com</a>).</p>
+<h2>License</h2>
+<p>This project is for educational use.</p>
+</body>
+</html>
